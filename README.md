@@ -22,4 +22,4 @@ And Mask Image should consist of only two colors - white & black.
 Code
 --------------
 
-![Preview](https://github.com/Eratos1122/ImageEdit/blob/master/ImageEdit.swift)
+![Code](https://github.com/Eratos1122/ImageEdit/blob/master/ImageEdit.swift)
