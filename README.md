@@ -2,7 +2,7 @@
 
 --------------
 
-![Preview](https://github.com/Eratos1122/ImageEdit/blob/master/mask.png)
+![Preview](https://github.com/Eratos1122/ImageEdit/blob/master/mask1.png)
 ![Preview](https://github.com/Eratos1122/ImageEdit/blob/master/border.png)
 ![Preview](https://github.com/Eratos1122/ImageEdit/blob/master/maskandmergewithborder.png)
 
