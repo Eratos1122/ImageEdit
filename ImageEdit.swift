@@ -73,6 +73,7 @@ func mergeImage(topImage:UIImage, bottomImage: UIImage) -> UIImage {
     
     let newImage:UIImage = UIGraphicsGetImageFromCurrentImageContext()!
     UIGraphicsEndImageContext()
+    
     return newImage
 }
 
@@ -101,5 +102,4 @@ func getAspectFitFrame(sizeImgView:CGSize, sizeImage:CGSize) -> CGRect{
     let newRect:CGRect = CGRect(x: x, y: y, width: newWidth, height: newHeight)
     
     return newRect
-    
 }

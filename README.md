@@ -8,10 +8,11 @@
 
 Usage
 --------------
-
+```swift
 mergedImage = mergeImage(topImage: UIImage(named: "border"), bottomImage: photo)
 
 maskedImage = maskImage(image: mergedImage, mask: UIImage(named: "mask"))
+```
 
 Important
 --------------
