@@ -1,8 +1,7 @@
 //
 //  ImageEdit.swift
-//  Flip
 //
-//  Created by Admin on 11/10/2017.
+//  Created by Eratos on 11/10/2017.
 //  Copyright © 2017 britt. All rights reserved.
 //
 

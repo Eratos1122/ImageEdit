@@ -18,8 +18,8 @@ maskedImage = maskImage(image: mergedImage, mask: UIImage(named: "mask"))
 Important
 --------------
 
-The <Gray> part of border image should be transparent for working.
-And the mask image should consist of only two colors - white & black.
+The <gray> part of the border-image should be transparent to work with.
+The mask image should consist of only two colors, white and black.
 
 Code
 --------------
