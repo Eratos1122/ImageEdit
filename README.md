@@ -5,6 +5,7 @@ Mask, Border, Merge
 
 ![Preview](https://github.com/Eratos1122/ImageEdit/blob/master/mask.png)
 ![Preview](https://github.com/Eratos1122/ImageEdit/blob/master/border.png)
+
 ![Preview](https://github.com/Eratos1122/ImageEdit/blob/master/maskandmergewithborder.png)
 
 Usage
@@ -39,8 +40,8 @@ func cropImageToSquare(image: UIImage) -> UIImage? {
     
     let size = CGSize(width: imageWidth, height: imageHeight)
     
-    let refWidth : CGFloat = CGFloat(image.cgImage!.width)
-    let refHeight : CGFloat = CGFloat(image.cgImage!.height)
+    let refWidth: CGFloat = CGFloat(image.cgImage!.width)
+    let refHeight: CGFloat = CGFloat(image.cgImage!.height)
     
     let x = (refWidth - size.width) / 2
     let y = (refHeight - size.height) / 2
@@ -57,27 +58,27 @@ func cropImageToSquare(image: UIImage) -> UIImage? {
 ```swift
 func getAspectFitFrame(sizeImgView:CGSize, sizeImage:CGSize) -> CGRect{
     
-    let imageSize:CGSize  = sizeImage
-    let viewSize:CGSize = sizeImgView
+    let imageSize: CGSize  = sizeImage
+    let viewSize: CGSize = sizeImgView
     
-    let hfactor : CGFloat = imageSize.width/viewSize.width
-    let vfactor : CGFloat = imageSize.height/viewSize.height
+    let hfactor: CGFloat = imageSize.width/viewSize.width
+    let vfactor: CGFloat = imageSize.height/viewSize.height
     
-    let factor : CGFloat = max(hfactor, vfactor)
+    let factor: CGFloat = max(hfactor, vfactor)
     
     // Divide the size by the greater of the vertical or horizontal shrinkage factor
-    let newWidth : CGFloat = imageSize.width / factor
-    let newHeight : CGFloat = imageSize.height / factor
+    let newWidth: CGFloat = imageSize.width / factor
+    let newHeight: CGFloat = imageSize.height / factor
     
-    var x:CGFloat = 0.0
-    var y:CGFloat = 0.0
+    var x: CGFloat = 0.0
+    var y: CGFloat = 0.0
     if newWidth > newHeight{
         y = (sizeImgView.height - newHeight)/2
     }
     if newHeight > newWidth{
         x = (sizeImgView.width - newWidth)/2
     }
-    let newRect:CGRect = CGRect(x: x, y: y, width: newWidth, height: newHeight)
+    let newRect: CGRect = CGRect(x: x, y: y, width: newWidth, height: newHeight)
     
     return newRect
 }
@@ -90,7 +91,7 @@ func maskImage(image: UIImage, mask: UIImage) -> UIImage{
     let rect = getAspectFitFrame(sizeImgView: size, sizeImage: mask.size)
     mask.draw(in: rect, blendMode: .normal, alpha: 1.0)
     
-    let newImage:UIImage = UIGraphicsGetImageFromCurrentImageContext()!
+    let newImage: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
     UIGraphicsEndImageContext()
     
     let imageReference = image.cgImage
@@ -121,7 +122,7 @@ func mergeImage(topImage:UIImage, bottomImage: UIImage) -> UIImage {
     
     topImage.draw(in: getAspectFitFrame(sizeImgView: size, sizeImage: topImage.size), blendMode: .normal, alpha: 1.0)
     
-    let newImage:UIImage = UIGraphicsGetImageFromCurrentImageContext()!
+    let newImage: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
     UIGraphicsEndImageContext()
     
     return newImage
